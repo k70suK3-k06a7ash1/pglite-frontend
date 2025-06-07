@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@electric-sql/pglite": "^0.3.3",
+    "@electric-sql/pglite-react": "^0.2.21",
     "next": "15.3.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
