@@ -1,4 +1,4 @@
-import {pgliteClient} from "../client"
+import { pgliteClient } from "../client";
 await pgliteClient.exec(`
   CREATE TABLE IF NOT EXISTS todo (
     id SERIAL PRIMARY KEY,
@@ -10,4 +10,4 @@ await pgliteClient.exec(`
   INSERT INTO todo (task, done) VALUES ('Create a table', true);
   INSERT INTO todo (task, done) VALUES ('Insert some data', true);
   INSERT INTO todo (task) VALUES ('Update a task');
-`)
+`);
