@@ -1,2 +1,2 @@
 push:
-	git add . && git commit -m 'chore' && git push origin 
+	git add . && git commit -m 'chore' && git push origin

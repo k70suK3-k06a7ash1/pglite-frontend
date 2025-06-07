@@ -1,15 +1,15 @@
-import { StrictMode } from 'react';
-import { createRoot } from 'react-dom/client';
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
 
-import { PGliteProvider } from '@electric-sql/pglite-react';
-import { PGlite } from '@electric-sql/pglite';
-import { live } from '@electric-sql/pglite/live';
+import { PGliteProvider } from "@electric-sql/pglite-react";
+import { PGlite } from "@electric-sql/pglite";
+import { live } from "@electric-sql/pglite/live";
 
-import App from './App.tsx';
+import App from "./App.tsx";
 
 const db = await PGlite.create({
-  extensions: { live },
-  dataDir:'idb://my-pgdata',
+	extensions: { live },
+	dataDir: "idb://my-pgdata",
 });
 
 await db.exec(`
@@ -20,10 +20,10 @@ await db.exec(`
   );
 `);
 
-createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-    <PGliteProvider db={db}>
-      <App />
-    </PGliteProvider>
-  </StrictMode>,
-)
+createRoot(document.getElementById("root")!).render(
+	<StrictMode>
+		<PGliteProvider db={db}>
+			<App />
+		</PGliteProvider>
+	</StrictMode>,
+);
