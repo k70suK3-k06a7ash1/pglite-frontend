@@ -1,6 +1,19 @@
 import { pgliteClient } from "../client";
 
-const ret = await pgliteClient.query(`
+
+interface MyRow {
+  id: number;
+  task: string
+  done: boolean 
+
+}
+
+
+export const getQuery = async() => {
+const ret = await pgliteClient.query<MyRow>(`
   SELECT * from todo WHERE id = 1;
 `);
-console.log(ret.rows);
+
+return {result : ret.rows}
+}
+

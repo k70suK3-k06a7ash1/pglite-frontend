@@ -1,5 +1,5 @@
 import { pgliteClient } from "../client";
-await pgliteClient.exec(`
+export const handleCommand = async () =>  await pgliteClient.exec(`
   CREATE TABLE IF NOT EXISTS todo (
     id SERIAL PRIMARY KEY,
     task TEXT,
